@@ -1,0 +1,12 @@
+STEP 3: SEQUENCE FILTERING & VALIDATION
+-------------------------------------
+UniProt ID: A0A0H3K5Y8
+Protein Name: SubName: Full=Similar to thiol methyltransferase 1 {ECO:0000313|EMBL:BAD79577.1};
+Organism: Synechococcus sp. (strain ATCC 27144 / PCC 6301 / SAUG 1402/1) (Anacystis nidulans).
+
+Protein Length: 443 amino acids
+Minimum Length Required: 50 amino acids
+Contains Ambiguous Amino Acids: False
+
+Validation Status: PASS
+Decision: Sequence is suitable for downstream analysis (BLAST & annotation).

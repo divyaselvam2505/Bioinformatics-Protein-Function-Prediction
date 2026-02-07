@@ -1,0 +1,13 @@
+STEP 5: FUNCTIONAL ANNOTATION
+------------------------------
+
+Top BLAST Hit Information:
+Hit ID: ref|WP_011243699.1|
+Hit Description: hypothetical protein [Synechococcus elongatus] >gb|ABB56149.1| thiol methyltransferase 1-like [Synechococcus elongatus PCC 7942 = FACHB-805] >gb|MBD2587981.1| thiol methyltransferase [Synechococcus elongatus FACHB-242] >gb|MBD2689049.1| thiol methyltransferase [Synechococcus elongatus FACHB-1061] >gb|MBD2707311.1| thiol methyltransferase [Synechococcus elongatus PCC 7942 = FACHB-805] >gb|MGL5883036.1| thiol methyltransferase [Synechococcus elongatus]
+Alignment Length: 443
+E-value: 0.0
+Bit Score: 2371.0
+Percent Identity: 100.00%
+
+Functional Inference:
+Based on the high sequence similarity to the top BLAST hit, the query protein (UniProt ID: P38922) is predicted to have a similar molecular function and biological role as the matched protein. This annotation is inferred computationally and requires experimental validation.
