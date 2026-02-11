@@ -1,5 +1,6 @@
 # Project Title 
-In-Silico Identification and Functional Characterization of Target Protein UniProt ID: A0A0H3K5Y8
+In-Silico Identification and Functional Characterization of a Target Protein
+UniProt ID: A0A0H3K5Y8
 # Author
 Divya S
 Msc Bioinformatics
@@ -7,94 +8,77 @@ Stella Maris college
 Email: divyaselvam@gmail.com
 # Description
 This repository presents a single continuous bioinformatics pipeline for quality analysis, validation, homology-based functional annotation, and biological interpretation of a protein sequence, predicting thiol methyltransferase activity
-#  Project Objective
-The objective of this project is to:
-•	Retrieve the protein sequence of UniProt ID A0A0H3K5Y8
-•	Evaluate its sequence quality and biological validity
-•	Apply filtering and validation criteria
-•	Identify homologous proteins using BLAST
-•	Predict the biological function using homology-based annotation
-•	Interpret results in a research-oriented manne
-# Single Continuous Pipeline 
-This project follows a dependency-based pipeline, where each step depends on the previous one:
+# Project Overview
+This project performs a computational functional characterization of a protein sequence retrieved from the UniProt Knowledgebase (ID: A0A0H3K5Y8).
+The workflow follows a structured bioinformatics pipeline:
 1.	Sequence Retrieval
-2.	Sequence Quality & Basic Analysis
-3.	Sequence Filtering & Validation
+2.	Quality Assessment
+3.	Validation & Filtering
 4.	Homology Search (BLAST)
 5.	Functional Annotation
 6.	Biological Interpretation
-This mirrors how real bioinformatics research is performed.
-# Pipeline 
-Step 1: Biological Sequence Selection (Research Setup)
-•	Selected sequence: Protein with UniProt ID A0A0H3K5Y8
-•	Source: UniProt Knowledgebase (Swiss-Prot/TrEMBL)
-•	Format: FASTA
-•	The protein was treated as an unknown or poorly characterized sequence for computational analysis.
-Why this step exists:
-Bioinformatics research always starts with a biological question and a sequence of interest, not with tools.
+The objective is to predict the molecular function of a poorly characterized protein using homology-based computational methods.
 ________________________________________
-Step 2: Sequence Quality & Basic Analysis
-Using Biopython, the following quality parameters were computed:
+# Biological Data Source
+•	Database: UniProt Knowledgebase
+•	Sequence ID: A0A0H3K5Y8
+•	Format: FASTA
+•	Treated as: Unknown / hypothetical protein
+________________________________________
+# Methodology Pipeline
+Step 1 — Sequence Retrieval
+The protein sequence was retrieved from UniProt in FASTA format and stored for downstream analysis.
+________________________________________
+Step 2 — Sequence Quality & Basic Analysis
+Using Biopython, the following were computed:
 •	Protein length
 •	Amino acid composition (%)
-This analysis ensures the sequence:
-•	Has biologically reasonable length
-•	Displays valid amino acid distribution
-📄 Output file:
+•	Biological plausibility check
+📄 Output:
 results/qc_summary.txt
-Why this step exists:
-Before trusting any sequence, researchers first confirm that it appears biologically meaningful.
+This ensures the sequence is biologically meaningful before further analysis.
 ________________________________________
-Step 3: Sequence Filtering & Validation (Decision Point)
-Biological validation rules were applied:
+Step 3 — Sequence Filtering & Validation
+Validation criteria applied:
 •	Minimum length threshold: 50 amino acids
-•	Ambiguous amino acids checked: X, B, Z, J
-Validation result:
-•	Sequence passed all criteria
-•	Approved for downstream BLAST and annotation
-📄 Output file:
+•	Checked for ambiguous residues (X, B, Z, J)
+Result:
+The sequence passed all validation criteria and was approved for downstream analysis.
+📄 Output:
 results/sequence_validation.txt
-Why this step exists:
-This step simulates scientific decision-making, not blind execution of commands.
 ________________________________________
-Step 4: Homology Search (BLAST – Core Research Step)
-•	Tool used: BLASTp
-•	Database: NCBI non-redundant (nr)
-•	Input: Protein sequence A0A0H3K5Y8
-•	Top homologs identified: Based on E-value, score, and alignment length
-📄 Output files:
-•	results/blast_results.xml
-•	results/blast_results.txt
-Why this step is central:
-Homology is the foundation of functional prediction.
-Proteins with significant sequence similarity often share similar molecular functions.
-________________________________________
-Step 5: Functional Annotation (Answering the Research Question)
-Using the top BLAST hit, the following were extracted:
-•	Hit ID and description
-•	Alignment length
+Step 4 — Homology Search (Core Analysis)
+Homology search was performed using:
+•	Tool: BLASTp
+•	Database: National Center for Biotechnology Information (NCBI) non-redundant (nr) database
+Top homologs were evaluated based on:
 •	E-value
 •	Bit score
+•	Alignment length
 •	Percent identity
-📄 Output file:
+📄 Outputs:
+results/blast_results.xml
+results/blast_results.txt
+Homology-based annotation is the foundation for protein function prediction.
+________________________________________
+Step 5 — Functional Annotation
+Using the top BLAST hit, the following were extracted:
+•	Hit description
+•	Alignment statistics
+•	Functional insights
+📄 Output:
 results/functional_annotation.txt
-🔍 Predicted Function 
-Based on strong sequence similarity to the top BLAST hit, UniProt ID A0A0H3K5Y8 is predicted to:
-•	Encode a protein with similar molecular function and biological role as its closest homolog
-•	Likely participate in cellular/metabolic processes conserved across related organisms
 ________________________________________
-Step 6: Biological Interpretation (Final Research Outcome)
-By integrating:
-•	Sequence quality metrics
-•	Validation criteria
-•	Homology evidence
-•	Functional annotation
-We conclude that:
-Protein A0A0H3K5Y8 is a biologically valid protein with strong homology to known proteins, allowing its molecular function to be predicted using computational methods.
-This step transforms the project from an assignment into a research-style analysis.
+# Predicted Functional Insight
+Based on strong sequence similarity to characterized homologs:
+•	The protein likely shares conserved molecular function.
+•	It may participate in fundamental cellular or metabolic pathways.
+•	Functional prediction is supported by statistically significant BLAST alignment metrics.
+This demonstrates how computational biology can infer biological roles without laboratory experimentation.
 ________________________________________
-# Project Structure 
+# Project Structure
 Functional_Sequence_Characterization/
+
 │
 ├── data/
 │   └── A0A0H3K5Y8_sequence.fasta
@@ -113,13 +97,36 @@ Functional_Sequence_Characterization/
 │
 └── README.md
 ________________________________________
-# Tools & Technologies Used
+# Tools & Technologies
 •	Python
 •	Biopython
-•	BLAST (NCBI)
+•	BLASTp
 •	UniProt Knowledgebase
+•	NCBI nr database
 •	FASTA format
 ________________________________________
-
+# How to Run the Project
+1.	Install dependencies:
+2.	pip install biopython
+3.	Place the FASTA sequence inside the data/ folder.
+4.	Run analysis scripts sequentially:
+5.	python sequence_qc.py
+6.	python sequence_validation.py
+7.	python homology_analysis.py
+8.	Check the results/ folder for output files.
+________________________________________
+# Key Learning Outcomes
+•	Biological sequence validation before analysis
+•	Quality control in computational biology
+•	Homology-based functional prediction
+•	Research-style pipeline structuring
+•	Reproducible bioinformatics workflow
+________________________________________
+# Research Significance
+This project simulates real-world bioinformatics research where:
+•	Sequence data is first validated
+•	Homology determines functional inference
+•	Biological conclusions are derived from computational evidence
+It transforms a raw sequence into a biologically interpretable result through systematic analysis.
 
 
